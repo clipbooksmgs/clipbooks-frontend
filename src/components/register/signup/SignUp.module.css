@@ -1,0 +1,40 @@
+.main-content{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+
+.form{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding:2%;
+}
+
+.input-field{
+    width: 100%;
+    border: 0.1rem solid #4BAAFC;
+    border-radius: 5px;
+    padding:1vh;
+    line-height: 4vh;
+    font-size: 100%;
+    font-weight: 500;
+    margin-bottom: 2%;
+   
+}
+.form .name{
+    display: flex;
+    justify-content: space-between;
+}
+.form .name .input-field{
+    width: 47%;
+}
+
+div.button{
+   display: flex;
+   justify-content: center;
+}
+
+

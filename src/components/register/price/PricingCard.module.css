@@ -1,0 +1,45 @@
+.pricing-card{
+    width: 25%;
+    background-color: #F1F1F1;
+    padding-top:2%;
+    padding-bottom: 2%;
+    padding-left:3%;
+    padding-right:3%;
+}
+
+.pricing-card > *{
+    margin-bottom: 2%;
+}
+
+.heading{
+    text-align: center;
+    height: 6vh;
+}
+
+.heading >*{
+    margin-bottom: 2%;
+}
+
+.heading > p{
+    font-size: 14px;
+}
+
+.pricing-list{
+    margin-top:10vh;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-amount{
+    width: 100%;
+    padding:10%;
+    border:1px solid black;
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
+
+.value{
+    font-size: 150%;
+    font-weight: 700;
+}
