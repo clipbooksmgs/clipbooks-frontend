@@ -1,17 +1,10 @@
+import { useSelector } from 'react-redux';
 import PageDescription from '../PageDescription';
 import styles from './Pricing.module.css';
 import PricingCard from './PricingCard';
 
 
-const govtPricingList = [
-    {"value":45.00, "period":"mon"},
-    {"value":490.00, "period":"yr"}
-];
 
-const standardPricingList = [
-    {"value":95.00, "period":"mon"},
-    {"value":990.00, "period":"yr"}
-]
 
 const stepNo = 'STEP 1 OF 3';
 const title = 'Choose Your Plan';
@@ -19,23 +12,29 @@ const description = 'Take the grunt work and guess work out of media media monit
 
 
 const Pricing = () => {
+
+    const products = useSelector(state => state.product.products);
+
+    
     return <div className={styles['main-content']}>
         <PageDescription stepNo={stepNo} title={title} description={description}>
         </PageDescription>
-        <div className={styles['pricing-grid']}>
+        {!products && <h5>Products are loading....</h5>}
+        {products && <div className={styles['pricing-grid']}>
             
             <PricingCard title="Government" 
             description="Requires govt email address"
-            pricingList={govtPricingList}/>
+            products={products} category='govt'/>
             
             <PricingCard title="Standard" 
             description="For candidate, campaigns, PAC's etc..."
-            pricingList={standardPricingList}/>
+            products={products} category='stand'/>
             
             <PricingCard title="Frims" 
             description="For mail, PR communications etc..."
             others="Contact Us"/>
         </div>
+    }
     </div>
 }
 

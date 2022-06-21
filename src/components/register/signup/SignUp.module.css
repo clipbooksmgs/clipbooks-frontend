@@ -12,6 +12,11 @@
     margin-right: auto;
     padding:2%;
 }
+.input-field-group{
+    width: 100%; 
+    margin-bottom: 2%;
+}
+
 
 .input-field{
     width: 100%;
@@ -20,16 +25,20 @@
     padding:1vh;
     line-height: 4vh;
     font-size: 100%;
-    font-weight: 500;
-    margin-bottom: 2%;
-   
+    font-weight: 500; 
 }
 .form .name{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
-.form .name .input-field{
+
+.form .name .input-field-group{
     width: 47%;
+}
+
+.form .name .input-field-group .input-field{
+    width: 100%;
 }
 
 div.button{
@@ -38,3 +47,7 @@ div.button{
 }
 
 
+.errMsgs{
+    color:red;
+    text-align: center;
+}

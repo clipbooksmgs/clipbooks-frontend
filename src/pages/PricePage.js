@@ -1,4 +1,4 @@
-import Pricing from "../components/register/price/Pricing"
+import Pricing from "../components/register/products/Pricing"
 
 
 const PricePage = () =>{
