@@ -9,6 +9,8 @@ import SignUpPage from './pages/SignUpPage';
 import { init } from './store/ProductSlice';
 import { getProducts } from './services/ProductService';
 import SubscriptionDetails from './components/register/payment/SubscriptionDetails';
+import Payment from './components/register/payment/Payment';
+import PaymentStatus from './components/register/payment/PaymentStatus';
 
 
 
@@ -19,7 +21,6 @@ function App() {
   useEffect(()=> {
     getProducts().then(
         (result)=> {
-            console.log(result);
             dispatch(init(result));
         }
     )
@@ -34,6 +35,7 @@ function App() {
           <Route path="/" element={<PricePage/>} />
           <Route path="/signup/:id" element={<SignUpPage/>}/>  
           <Route path='/subdetails' element={<SubscriptionDetails/>}/>
+          <Route path='/payment/*' element={<Payment/>}/>
         </Routes>
     </div>
   );

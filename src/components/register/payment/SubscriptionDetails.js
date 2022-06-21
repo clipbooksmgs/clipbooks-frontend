@@ -1,5 +1,8 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { createClient } from "../../../services/ClientService";
+import { clientCreated } from "../../../store/ClientSlice";
+import { created } from "../../../store/SubscriptionSlice";
 import Button from "../../../ui/Button";
 import Table from "../../../ui/Table";
 
@@ -9,11 +12,11 @@ import styles from './SubscriptionDetails.module.css';
 const SubscriptionDetails = () => {
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const client = useSelector(state => state.client.client);
     const products = useSelector(state => state.product.products);
     const selectedProduct = products.find(prod => prod.stripeProdId === client.subscription.prodId);
-
     const {firstname, lastname,organization,email} = client;
     const signupDetails = {firstname,lastname,organization,email};
     const {name,period,price} = selectedProduct;
@@ -33,8 +36,17 @@ const SubscriptionDetails = () => {
         navigate('/');
     }
 
-    const checkoutHandler = () =>{
-        navigate('/checkout');
+    const checkoutHandler = async () =>{
+        const newClient= {...client}
+        newClient.subscription = {  
+            prodId: selectedProduct.stripeProdId,
+            priceId: selectedProduct.stripePriceId
+        };
+        dispatch(clientCreated({"client":newClient}));
+        const subscriptionDetails = await createClient(newClient);
+        console.log(subscriptionDetails);
+        dispatch(created({subscriptionDetails}))
+        navigate('/payment/checkout');
     }
 
     return <div className={styles.container}>

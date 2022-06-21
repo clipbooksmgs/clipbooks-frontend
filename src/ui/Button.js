@@ -6,7 +6,10 @@ const Button = (props) =>  {
          props.buttonHandler();
       }
    }
-   return <button className={styles.button} onClick={buttonHandler} type={props.type}>{props.label}</button>
+   return <button className={styles.button} onClick={buttonHandler} 
+                  type={props.type} disable={props.isDisable}>
+                     {props.label}
+         </button>
 }
 
 export default Button

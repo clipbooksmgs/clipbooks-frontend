@@ -9,6 +9,9 @@ export const createClient = (client) => {
     }).then((response)=> {
         return response.data.result;
     }).catch(err =>{
+        if(err.response.status === 500){
+            throw new Error('Account not created try again after sometime...');
+        }
         throw new Error(err.response.data.errors);
     })
 }

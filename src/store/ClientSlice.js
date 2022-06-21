@@ -11,6 +11,7 @@ const clientSlice = createSlice({
     initialState,
     reducers: {
         clientCreated: (state,action) => {
+            console.log(action.payload);
             state.client = action.payload.client
         }
     }
