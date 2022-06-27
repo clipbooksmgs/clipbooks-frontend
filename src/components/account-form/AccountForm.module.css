@@ -1,11 +1,3 @@
-.main-content{
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5vh;
-}
-
-
 .form{
     width: 75%;
     margin-left: auto;
@@ -34,6 +26,9 @@
 
 .form .name .input-field-group{
     width: 47%;
+}
+.blocked{
+    display: none;
 }
 
 .form .name .input-field-group .input-field{

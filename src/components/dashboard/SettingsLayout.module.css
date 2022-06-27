@@ -1,0 +1,13 @@
+.main-container {
+    width: 100%;
+    padding:4%;
+}
+
+.heading{
+    color:#4BAAFC;
+    text-decoration: underline;
+}
+.content{
+    margin-top: 4%;
+
+}

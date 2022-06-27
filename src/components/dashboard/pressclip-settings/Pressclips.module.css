@@ -1,0 +1,29 @@
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 25vh;
+    margin-bottom: 3vh;
+    margin-top:auto;
+    padding:1%;
+}
+
+
+.item .label{
+    width: 35%;
+}
+
+.item .values {
+    width: 60%;
+    overflow-y: auto;
+}
+
+.label .question {
+    font-weight: 600;
+}
+
+.label .hint{
+    text-decoration: transparent;
+    color:#8F8F8F;
+}

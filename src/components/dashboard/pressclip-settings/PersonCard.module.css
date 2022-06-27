@@ -1,0 +1,40 @@
+.layout{
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    padding:1%;
+}
+.card { 
+    border:2px solid #4BAAFC;
+    background-color: #ECF6FF;
+    border-radius: 10px;
+    text-align: center;
+    padding:10px;
+    display: inline-block;
+    font-weight: 700;
+    width: auto;
+}
+
+
+.close-button {
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.close-button > img{
+    width: 90%;
+}
+
+.close-button:hover {
+}
+

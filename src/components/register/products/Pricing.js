@@ -15,6 +15,8 @@ const Pricing = () => {
 
     const products = useSelector(state => state.product.products);
 
+    console.log(products);
+
     
     return <div className={styles['main-content']}>
         <PageDescription stepNo={stepNo} title={title} description={description}>

@@ -1,0 +1,33 @@
+.main-container {
+    width: 100%;;
+    display: flex;
+    justify-content: center;
+}
+
+.left-container{
+    width: 20%;
+    padding: 3%;
+    min-height: 88vh;
+    height: auto;
+    background-color: #D4D4D4;
+}
+
+.right-conatiner{
+    width: 80%;
+}
+
+
+.left-container > ul {
+    list-style-type: none;
+}
+
+
+.left-container > ul > li {
+    margin-bottom: 10%;
+    font-weight: 700;
+}
+
+.left-container > ul > li > a{
+    text-decoration: none;
+}
+

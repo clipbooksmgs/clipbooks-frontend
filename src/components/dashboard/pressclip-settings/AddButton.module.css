@@ -1,0 +1,9 @@
+.button {
+    min-width: 30%;
+    width: auto;
+    border:2px dotted #4BAAFC;
+    background-color: #ECF6FF;
+    border-radius: 5px;
+    text-align: center;
+    padding:10px;
+}

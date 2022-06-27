@@ -17,6 +17,7 @@ import storage from 'redux-persist/lib/storage'
 import productReducer from "./ProductSlice";
 import clientReducer from './ClientSlice';
 import subscriptionReducer from './SubscriptionSlice';
+import loggedInUserReducer from "./LoggedInUserSlice";
 
 
 const persistConfig = {
@@ -27,7 +28,8 @@ const persistConfig = {
 const rootReducer = combineReducers({
     'product': productReducer,
     'client': clientReducer,
-    'subscription': subscriptionReducer
+    'subscription': subscriptionReducer,
+    'loggedInUser': loggedInUserReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

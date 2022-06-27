@@ -44,8 +44,8 @@ const SubscriptionDetails = () => {
         };
         dispatch(clientCreated({"client":newClient}));
         const subscriptionDetails = await createClient(newClient);
-        console.log(subscriptionDetails);
         dispatch(created({subscriptionDetails}))
+        sessionStorage.removeItem('clientFormData');
         navigate('/payment/checkout');
     }
 
